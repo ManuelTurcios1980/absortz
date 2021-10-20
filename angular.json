@@ -123,6 +123,10 @@
               "devServerTarget": "absorbz:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "formcontact-c2ffd": {
+      "hosting": {
+        "absorbz": [
+          "formcontact-c2ffd"
+        ]
+      }
+    }
+  }
+}

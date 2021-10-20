@@ -4,6 +4,7 @@
 }
 
 
+
 .nav  img {
     width:100%;
     height: auto;
@@ -235,7 +236,17 @@
   a:left {
     color:#eee
   }
+
+  #fila{
+    background-color: #a2df41;
+    margin-left: 20px;
+  }
  
+
+  #filaBorde{
+       border-collapse: collapse;
+      border: 0.2px solid bisque;
+    }
  /*  .circle-link {
     height: 40px;
     width: 40px;
