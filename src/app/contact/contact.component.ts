@@ -12,6 +12,7 @@ export class ContactComponent implements OnInit {
       return new FormGroup({
         email: new FormControl(''),
         name: new FormControl(''),
+        Telefono: new FormControl(''),
         message: new FormControl('')
       });
 
@@ -19,7 +20,7 @@ export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
   constructor(private dbData: DataDbService) { 
-  this.contactForm = this.CreateFormGroup();
+       this.contactForm = this.CreateFormGroup();
 
   }
 
@@ -27,12 +28,22 @@ export class ContactComponent implements OnInit {
   }
 
   onResetForm(){
-
+     this.contactForm.reset();
   }
 
   onSaveForm(){
-    console.log('saved');
+   /* console.log('saved', this.contactForm.value);*/
+   
+   /* const newContact ={
+       name: 'manuel',
+       email: 'mturcios@gmail.com',
+       Telefono: '31482483',
+       message: 'Me intereza comprar AbsorbZ'
 
+    }*/
+    this.dbData.saveMessage(this.contactForm.value);
   }
+
+ 
 
 }

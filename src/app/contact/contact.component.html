@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="es">
-   <head>
-       <title> Formulario de contacto</title>
-       <meta charset="UTF-8">
-       
-   </head>
-   <body>
-      <form action="">
-         <h2> CONTACTO </h2>
-         <input type="text" name="Nombre" placeholder="Nombre">
-         <input type="text" name="Correo" placeholder="Correo">
-         <input type="text" name="Telefono" placeholder="Telefono">
-         <textarea name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
-         <input type="button" value="Enviar" id="boton">
 
-      </form>
+      <div class="form-container">
+         <h2> CONTACTANOS </h2>
+         <form [formGroup]="contactForm" (ngSubmit) = "onSaveForm()" > 
+           
+            <input type="text" formControlName="name" placeholder="Nombre">
+            <input type="text" formControlName="email" placeholder="Correo">
+            <input type="text" formControlName="Telefono" placeholder="Telefono">
+            <textarea formControlName="message" placeholder="Escriba aqui su mensaje"></textarea>
+            <button type="submit" class="btn-send"  > Enviar </button>
 
-   </body>
+         </form>
+       </div>
 
-</html>
