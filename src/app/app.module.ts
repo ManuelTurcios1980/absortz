@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import { AngularFireModule} from '@angular/fire'
-import { AngularFirestoreModule} from '@angular/fire/firestore'
+import { AngularFirestoreModule} from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { DataDbService } from './services/data-db.service';
 

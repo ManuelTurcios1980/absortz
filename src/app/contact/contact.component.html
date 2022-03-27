@@ -3,10 +3,36 @@
          <h2> CONTACTANOS </h2>
          <form [formGroup]="contactForm" (ngSubmit) = "onSaveForm()" > 
            
-            <input type="text" formControlName="name" placeholder="Nombre">
-            <input type="text" formControlName="email" placeholder="Correo">
-            <input type="text" formControlName="Telefono" placeholder="Telefono">
-            <textarea formControlName="message" placeholder="Escriba aqui su mensaje"></textarea>
+            <input type="text" formControlName="name" placeholder="Digite su nombre">
+                  <div class="alert-danger" *ngIf= "name.invalid && (name.dirty || name.touched)">
+                        <div class="container-error-message" *ngIf="name.errors.required">
+                              Name is requiered
+                        </div>
+                        <div class="container-error-message" *ngIf="name.errors.minlength">
+                        Name must be at least 5 characters long.
+                        </div>
+                  </div>
+             <!-- </ng-template> -->
+            <input type="text" formControlName="email" placeholder="Ingrese Correo" >
+                        <div class="alert-danger" *ngIf= "email.invalid && (name.dirty || email.touched)">
+                              <div class="container-error-message" *ngIf="email.errors.required">
+                                    email is requiered
+                              </div>
+                              <div class="container-error-message" *ngIf="email.errors.minlength">
+                                    email must be at least 5 characters long.
+                              </div>
+                        </div>
+
+            <input type="text" formControlName="Telefono" placeholder="Ingrese Telefono" >
+                  <div class="alert-danger" *ngIf= "Telefono.invalid && (name.dirty || Telefono.touched)">
+                        <div class="container-error-message" *ngIf="Telefono.errors.required">
+                              Telefono is requiered
+                        </div>
+                        <div class="container-error-message" *ngIf="Telefono.errors.minlength">
+                              Telefono must be at least 5 characters long.
+                        </div>
+                  </div>
+            <textarea formControlName="message" placeholder="Escriba aqui su mensaje" ></textarea>
             <button type="submit" class="btn-send"  > Enviar </button>
 
          </form>
